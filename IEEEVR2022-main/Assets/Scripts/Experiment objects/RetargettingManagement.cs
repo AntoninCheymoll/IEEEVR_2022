@@ -41,7 +41,7 @@ public class RetargettingManagement : MonoBehaviour
                 }
             }
 
-            if(current_num != 0) foreach (Transform child in invisible)
+            if(current_num != 0 && current_num != 2) foreach (Transform child in invisible)
             {
                 if (child.name == "AltPoint")
                 {

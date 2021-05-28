@@ -1,4 +1,4 @@
-t1,t2,t0,t2|m3,m1,m0,m2
+t1,t3,t0,t2|m3,m1,m0,m2
 m0,m1,m3,m2|t0,t1,t3,t2
 m0,m2,m3,m1|t0,t2,t3,t1
 m2,m3,m0,m1|t2,t3,t0,t1

@@ -43,7 +43,7 @@ public class ProprioceptiveDriftManager : MonoBehaviour
         if (events.selectLeft())
         {
             setPanelXPos(panel.transform.position.x + speed);
-            Debug.Log(tip.transform.position.x - panel.transform.position.x);
+
 
         }
         /*

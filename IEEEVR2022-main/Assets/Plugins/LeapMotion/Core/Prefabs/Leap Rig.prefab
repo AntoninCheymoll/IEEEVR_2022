@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 1
+  displayed: 0
 --- !u!1 &1671192356237494
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,3 +241,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 1
+  displayed: 0
