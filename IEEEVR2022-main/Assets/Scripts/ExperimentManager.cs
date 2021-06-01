@@ -52,6 +52,8 @@ public class ExperimentManager : MonoBehaviour
     public GameObject blueCircle;
     public GameObject leftIndexInvisible;
     public GameObject rightIndexDisplay;
+    public GameObject occulusAnchor;
+    public Vector3 calibrationVector;
 
     ////////////////////////////
 
@@ -75,7 +77,7 @@ public class ExperimentManager : MonoBehaviour
         ProprioceptiveDriftManager.initiate(this);
         Questionnaire.initiate(this);
 
-        currentState = State.Wait;
+        currentState = State.Calibration;
         //currentState = State.Calibration;
         currentPhase = Phase.NoOffset;
         startState();
@@ -178,8 +180,12 @@ public class ExperimentManager : MonoBehaviour
 
         //            currentState = State.InitSample;
 
-        if (currentState == State.Calibration && events.press("space"))
+        if (currentState == State.Calibration && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.8f)
         {
+            Transform controllerCenter = controller.transform.Find("center");
+            if(controllerCenter.gameObject.active)occulusAnchor.transform.position = blueCircle.transform.position - controllerCenter.transform.position + occulusAnchor.transform.position;
+            // occulusAnchor.transform.position += calibrationVector; 
+            //occulusAnchor.transform.eulerAngles = controller.transform.position; 
         }
         else if (currentState == State.Calibration && Input.GetKey(KeyCode.Return))
         {

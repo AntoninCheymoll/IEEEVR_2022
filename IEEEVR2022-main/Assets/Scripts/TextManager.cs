@@ -25,7 +25,7 @@ public static class TextManager
         if (textName == TextName.TaskVM) { return "You can move your hands freely, please refrain from bringging your hands close to each other."; }
         if (textName == TextName.TaskST) { return "Follow the path indicated on your left hand with your right index.\n\nWhen the path is completed, spread your hands to display the next one."; };
         if (textName == TextName.Wait) { return "The sample is going to start soon."; };
-        if (textName == TextName.Calibration) { return "Place the controller at the position corresponding to the circle position in the real environement, handle facing out of the table.\n\n Press \"space\" to recalibrate the environement and\"enter\" to start the experiment. "; };
+        if (textName == TextName.Calibration) { return "Place the controller at the position corresponding to the circle position in the real environement.\n\n Press the controller trigger button to recalibrate the environement and\"enter\" to start the experiment. "; };
 
         return "";
     }
