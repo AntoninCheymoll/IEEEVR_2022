@@ -55,6 +55,8 @@ public class ExperimentManager : MonoBehaviour
     public GameObject occulusAnchor;
     public Vector3 calibrationVector;
 
+    Vector3 offsetValue;
+
     ////////////////////////////
 
 
@@ -89,6 +91,7 @@ public class ExperimentManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentState != State.Calibration) occulusAnchor.transform.position = offsetValue;
 
         testChangeState();
 
@@ -183,7 +186,10 @@ public class ExperimentManager : MonoBehaviour
         if (currentState == State.Calibration && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.8f)
         {
             Transform controllerCenter = controller.transform.Find("center");
-            if(controllerCenter.gameObject.active)occulusAnchor.transform.position = blueCircle.transform.position - controllerCenter.transform.position + occulusAnchor.transform.position;
+            if (controllerCenter.gameObject.active) {
+                occulusAnchor.transform.position = blueCircle.transform.position - controllerCenter.transform.position + occulusAnchor.transform.position;
+                offsetValue = blueCircle.transform.position - controllerCenter.transform.position + occulusAnchor.transform.position;
+            }
             // occulusAnchor.transform.position += calibrationVector; 
             //occulusAnchor.transform.eulerAngles = controller.transform.position; 
         }
