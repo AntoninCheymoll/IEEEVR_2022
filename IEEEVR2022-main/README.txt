@@ -53,4 +53,6 @@ About the experience:
 		- Its better to remind the participant that for the path following task, the speed of the task completion is not recorded, and to incitate them to complete the path slowly, in order to not create tracking issue, and to enmpower the embodiement
 		- Not to forget to remind the participant to not touch his thumb during the experiment. 
 		- The tracking is better if the participant look down when he looks at his hands.
+		- If the leap motions hand get too close of the occulus "guardian" border, it may move the camera, try to have a big enough guardian. 
+ 
 	- 
